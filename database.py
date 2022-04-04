@@ -4,7 +4,7 @@ from mysql.connector import Error
 def VerifierMail(liste) -> list:
     try:
         connection = mysql.connector.connect(host='localhost',
-                                            database='Projet',
+                                            database='fellaga',
                                             user='root',
                                             password='')
 
@@ -24,7 +24,7 @@ def Inscription(list) -> list:
 
     try:
         connection = mysql.connector.connect(host='localhost',
-                                            database='Projet',
+                                            database='fellaga',
                                             user='root',
                                             password='')
 
@@ -45,7 +45,7 @@ def Inscription(list) -> list:
 def Connexion(liste)-> list:
     try:
         connection = mysql.connector.connect(host='localhost',
-                                            database='Projet',
+                                            database='fellaga',
                                             user='root',
                                             password='')
 
@@ -58,23 +58,3 @@ def Connexion(liste)-> list:
 
     except mysql.connector.Error as e:
         return False
-
-"""""
-Nom = 'Coulibaly'
-Prenom = 'Adama'
-Mail = 'Adams10@hotmail.com'
-Password = 'root'
-
-liste = [Nom,Prenom,Mail,Password]
-
-if Inscription(liste) == True:
-    print("Inscription reussie")
-else:
-    print("Echec de l'inscription")
-
-liste1 = [Mail,Password]
-if Connexion(liste1) == True:
-    print("Connexion reussie")
-else:
-    print("Echec de la connexion")
-"""""
