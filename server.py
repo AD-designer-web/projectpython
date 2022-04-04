@@ -6,7 +6,7 @@ import database
 #Fonction qui permet au serveur de recupérer les informations d'inscription d'un client
 def Inscription(client:socket, buffer:int):
     liste = list()
-    req = "Veuillez entrer votre nom de famille svp : " 
+    req = "Veuillez entrer votre nom svp : " 
     client.send(req.encode("utf-8")) #1
     requete = client.recv(buffer)
     liste.append(requete.decode("utf-8"))
@@ -16,7 +16,7 @@ def Inscription(client:socket, buffer:int):
     requete = client.recv(buffer)
     liste.append(requete.decode("utf-8"))
 
-    req = "Veuillez entrer votre adresse mail svp :"
+    req = "Veuillez entrer votre mail svp :"
     client.send(req.encode("utf-8")) #3
     requete = client.recv(buffer)
     liste.append(requete.decode("utf-8"))
