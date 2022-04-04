@@ -38,8 +38,6 @@ def Inscription(client:socket, buffer:int):
         if verification == "Les mots de passe ne sont pas identiques !!":
             print(verification)
 
-
-
 #Fonction qui interagit avec le serveur pour se connecter 
 def Connexion(client:socket,buffer:int):
     reponse = client.recv(buffer)
